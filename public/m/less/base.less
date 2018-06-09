@@ -1,0 +1,117 @@
+@mainColor: #006699;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    /* 去除图片底部3px间距 */
+    vertical-align: middle;
+}
+
+body {
+    background-color: #fff;
+    /* padding-top: 45px; */
+    /* padding-bottom: 45px; */
+}
+
+// 头部公共样式
+#header {
+    height: 45px;
+    width: 100%;
+    background-color: @mainColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    h4 {
+        margin: 0;
+        text-align: center;
+        line-height: 45px;
+        font-weight: 400;
+        font-family: "微软雅黑";
+        color: #fff;
+    }
+    .fa-arrow-left {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        color: #fff;
+    }
+    .fa-search {
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    .search-form {
+        padding: 5px 45px;
+        input {
+            background-color: #fff;
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 0;
+        }
+    }
+}
+
+#main {
+    padding: 45px 0;
+}
+
+/* 3. 商品的公共样式 */
+
+.product {
+    display: block;
+    box-shadow: 0px 0px 5px #666;
+    text-align: center;
+    padding-bottom: 10px;
+    .product-img {
+        width: 100%;
+    }
+    .product-name {}
+    .product-price {
+        font-size: 12px;
+        .new-price {
+            color: #f00;
+        }
+        .old-price {
+            color: #888;
+        }
+    }
+    .product-buy {}
+}
+
+#footer {
+    z-index: 999;
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: @mainColor;
+    a {
+        display: block;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        >span {
+            display: block;
+            margin-top: 2px;
+        }
+        &.active {
+            color: orange;
+        }
+    }
+}

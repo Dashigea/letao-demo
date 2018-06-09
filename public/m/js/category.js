@@ -4,6 +4,7 @@ $(function () {
     letao.initSlide();
     // 通过乐淘对象初始化区域滚动
     letao.initScroll();
+    letao.getCategoryLeft();
 })
 //Letao的构造函数
 var Letao = function () {
@@ -29,5 +30,15 @@ Letao.prototype = {
             bounce: true //是否启用回弹
         };
         mui('.mui-scroll-wrapper').scroll(options);
+    },
+    // 获取左侧分类的数据
+    getCategoryLeft: function () {
+        // 1. 发送请求获取左侧分类的数据
+        // $.ajax({
+        //     url:'category/queryTopCategory',
+        //     success: function (data) {
+        //         console.log(data);
+        //     }
+        // })
     }
 }

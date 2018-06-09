@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#header {
+  height: 45px;
+  width: 100%;
+  background-color: #006699;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+#header h4 {
+  margin: 0;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: "微软雅黑";
+  color: #fff;
+}
+#header a {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+#footer {
+  z-index: 999;
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #006699;
+}
+#footer a {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+#footer a > span {
+  display: block;
+  margin-top: 2px;
+}
+#footer a.active {
+  color: orange;
+}
+body {
+  background-color: #fff;
+}
+#main {
+  padding: 45px 0;
+}
+#main #category {
+  width: 100%;
+}
+#main #category .nav {
+  padding: 10px 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#main #category .nav li {
+  flex-basis: 33.33333%;
+  margin-bottom: -5px;
+}
+#main #category .nav li a {
+  display: block;
+  width: 100%;
+}
+#main #category .nav li a img {
+  width: 100%;
+  height: 100%;
+}
+#main #discount {
+  display: flex;
+  border-top: 1px solid #ccc;
+  height: 100%;
+  padding: 0 10px;
+}
+#main #discount .left {
+  flex: 2;
+  width: 100%;
+  display: flex;
+}
+#main #discount .left a {
+  flex: 1;
+  width: 100%;
+}
+#main #discount .left a img {
+  width: 100%;
+}
+#main #discount .right {
+  flex: 1;
+  display: flex;
+  display: block;
+}
+#main #discount .right img {
+  width: 100%;
+}
+#main #brand {
+  padding: 0 10px;
+}
+#main #brand a.title {
+  width: 100%;
+  display: block;
+}
+#main #brand a.title img {
+  width: 100%;
+}
+#main #brand .content a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#main #brand .content a img {
+  width: 100%;
+}
+#main #sport,
+#main #women,
+#main #man {
+  padding: 0 10px;
+}
+#main #sport .title,
+#main #women .title,
+#main #man .title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+#main #sport .title a,
+#main #women .title a,
+#main #man .title a {
+  display: block;
+  width: 100%;
+}
+#main #sport .title a img,
+#main #women .title a img,
+#main #man .title a img {
+  width: 100%;
+}
+#main #sport .content .mui-row div,
+#main #women .content .mui-row div,
+#main #man .content .mui-row div {
+  padding: 5px;
+}
+#main #sport .content .mui-row div .product,
+#main #women .content .mui-row div .product,
+#main #man .content .mui-row div .product {
+  box-shadow: 0 0 5px #666;
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#main #sport .content .mui-row div .product .product-img,
+#main #women .content .mui-row div .product .product-img,
+#main #man .content .mui-row div .product .product-img {
+  width: 100%;
+}
+#main #sport .content .mui-row div .product .product-name,
+#main #women .content .mui-row div .product .product-name,
+#main #man .content .mui-row div .product .product-name {
+  padding: 0 10px;
+}
+#main #sport .content .mui-row div .product .product-price,
+#main #women .content .mui-row div .product .product-price,
+#main #man .content .mui-row div .product .product-price {
+  font-size: 12px;
+}
+#main #sport .content .mui-row div .product .product-price .new-price,
+#main #women .content .mui-row div .product .product-price .new-price,
+#main #man .content .mui-row div .product .product-price .new-price {
+  color: #f00;
+}
+#main #sport .content .mui-row div .product .product-price .old-price,
+#main #women .content .mui-row div .product .product-price .old-price,
+#main #man .content .mui-row div .product .product-price .old-price {
+  color: #888;
+}
