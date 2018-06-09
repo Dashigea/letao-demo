@@ -31,21 +31,31 @@
     <main id="main">
         <div class="category-left">
             <ul>
-                <li class="active"><a href="#">
-                    体育馆
-                </a></li>
-                <li><a href="#">
-                    女生馆
-                </a></li>
-                <li><a href="#">
-                    男生馆
-                </a></li>
-                <li><a href="#">
-                    什么馆
-                </a></li>
-                <li><a href="#">
-                    不好馆
-                </a></li>
+                <!-- <li class="active">
+                    <a href="#">
+                        体育馆
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        女生馆
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        男生馆
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        什么馆
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        不好馆
+                    </a>
+                </li> -->
             </ul>
         </div>
         <div class="category-right">
@@ -55,7 +65,6 @@
                 <div class="mui-scroll">
                     <!-- 真实的滚动的DOM内容 -->
                     <div class="mui-row">
-                        
                     </div>
                 </div>
             </div>
@@ -80,7 +89,7 @@
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="" class="fa fa-user" aria-hidden="true">
+                <a href="./login.html" class="fa fa-user" aria-hidden="true">
                     <span>会员中心</span>
                 </a>
             </div>
@@ -90,12 +99,29 @@
 
     <!-- 1. 定义左侧分类的模板 起一个模板的id Tmp 设置type="text/html"-->
     <!-- {{each rows as value i}} each是循环 rows是循环的数组 as value 给循环遍历的每一项起别名 i循环的索引 -->
-    <script id="categoryLeftTmp" type="text/html">
+    <script id="cateogoryLeftTmp" type="text/html">
         {{each rows as value i}}
-        
-
+        <li class="{{i == 0 ? 'active' : ''}}">
+            <!-- 渲染左侧分类的时候把id保存在左侧分类的a的自定义属性data-id上 -->
+            <a href="#" data-id="{{value.id}}">{{value.categoryName}}</a>
+        </li>
         {{/each}}
     </script>
+    <!-- 2. 定义右侧分类的模板  -->
+    <script id="categoryRightTmp" type="text/html">
+        {{each rows as value i}}
+        <div class="mui-col-xs-4">
+            <a href="#">
+                <img src="{{value.brandLogo}}" alt="">
+                <p>{{value.brandName}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+
+
+
+
     <!-- 引入mui的js文件 -->
     <script src="./lib/mui/js/mui.min.js"></script>
     <!-- 引入zepto的js文件  -->

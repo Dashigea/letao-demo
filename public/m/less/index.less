@@ -53,11 +53,14 @@ body {
     }
     #brand {
         padding: 0 10px;
-        a.title {
+        .title {
             width: 100%;
             display: block;
-            img {
-                width: 100%;
+            a{
+                display: block;
+                img {
+                    width: 100%;
+                }
             }
         }
         .content {
@@ -71,7 +74,9 @@ body {
             }
         }
     }
-    #sport,#women,#man {
+    #sport,
+    #women,
+    #man {
         padding: 0 10px;
         .title {
             margin-top: 20px;
@@ -86,7 +91,7 @@ body {
         }
         .content {
             .mui-row {
-                div{
+                div {
                     padding: 5px;
                     .product {
                         box-shadow: 0 0 5px #666;
@@ -105,15 +110,12 @@ body {
                                 color: #f00;
                             }
                             .old-price {
-                                color:#888;
+                                color: #888;
                             }
                         }
-        
                     }
-
                 }
             }
         }
     }
 }
-

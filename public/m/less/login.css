@@ -40,6 +40,7 @@ body {
   position: absolute;
   top: 15px;
   left: 15px;
+  font-size: 18px;
   color: #fff;
 }
 #header .fa-search {
@@ -102,51 +103,29 @@ body {
 #footer a.active {
   color: orange;
 }
-html,
-body {
-  height: 100%;
-  background-color: #ccc;
-}
 #main {
-  display: flex;
   height: 100%;
 }
-#main .category-left {
-  flex-basis: 80px;
-  background-color: #ccc;
-}
-#main .category-left > ul {
-  background: #fff;
-}
-#main .category-left > ul > li.active > a {
-  background-color: #ccc;
-}
-#main .category-left > ul > li > a {
-  font-size: 14px;
-  height: 45px;
-  color: #666;
-  line-height: 45px;
-  text-align: center;
-  display: block;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
-#main .category-right {
-  position: relative;
-  flex: 1;
-  height: 100%;
-}
-#main .category-right .mui-scroll {
-  padding: 10px;
-  min-height: 101%;
-}
-#main .category-right .mui-scroll .mui-row {
-  background-color: #fff;
-}
-#main .category-right .mui-scroll .mui-row > div > a {
-  display: block;
-  text-align: center;
-}
-#main .category-right .mui-scroll .mui-row > div > a > img {
+#main .form-box {
   width: 100%;
+  padding: 10px;
+}
+#main .form-box .password-box {
+  position: relative;
+}
+#main .form-box .login {
+  width: 100%;
+  margin-top: 10px;
+}
+#main .form-box .mui-icon-eye {
+  position: absolute;
+  font-size: 20px;
+  right: 10px;
+  bottom: 25px;
+  color: #999;
+}
+#main .register {
+  float: right;
+  padding-right: 10px;
+  font-size: 14px;
 }
