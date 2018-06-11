@@ -139,3 +139,57 @@ body {
   /* 把按钮左上角左下角的圆角去掉 */
   border-radius: 0px 3px 3px 0px;
 }
+#main #product {
+  font-size: 14px;
+}
+#main #product > div {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+#main #product .product-name > span {
+  font-size: 16px;
+}
+#main #product .product-price .new-price {
+  color: #ea543d;
+  font-size: 24px;
+  font-weight: 700;
+}
+#main #product .product-price .old-price {
+  color: #afafaf;
+}
+#main #product .product-size .btn-size {
+  display: inline-block;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+#main #product .product-size .btn-size.active {
+  background-color: orange;
+}
+#footer {
+  background-color: #e6e6e6;
+}
+#footer .fa-shopping-cart {
+  position: absolute;
+  left: 20px;
+  top: 3px;
+  font-size: 20px;
+  color: #333;
+}
+#footer .btn-options {
+  padding: 5px 10px 5px 60px;
+}
+#footer .btn-options .add-cart {
+  width: 50%;
+  float: left;
+  padding-right: 5px;
+}
+#footer .btn-options .buy {
+  width: 50%;
+  float: left;
+  padding-left: 5px;
+}
+#footer .btn-options .btn-add-cart,
+#footer .btn-options .btn-buy {
+  padding: 7px 0;
+}

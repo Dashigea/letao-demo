@@ -1,14 +1,9 @@
+/* 引入公共样式文件 */
+/* 主题色 变量*/
+/* 页面的公共样式 CSS重置 */
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
-}
-ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
+  padding: 0;
 }
 img {
   /* 去除图片底部3px间距 */
@@ -19,28 +14,28 @@ body {
   /* padding-top: 45px; */
   /* padding-bottom: 45px; */
 }
+/* 1. 头部区域公共样式 */
 #header {
-  height: 45px;
-  width: 100%;
-  background-color: #006699;
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   z-index: 999;
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+  /* 搜索表单 */
 }
-#header h4 {
-  margin: 0;
-  text-align: center;
-  line-height: 45px;
-  font-weight: 400;
-  font-family: "微软雅黑";
+#header > h4 {
   color: #fff;
+  line-height: 45px;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
 }
 #header .fa-arrow-left {
   position: absolute;
-  top: 15px;
   left: 15px;
-  font-size: 18px;
+  top: 15px;
   color: #fff;
 }
 #header .fa-search {
@@ -50,16 +45,49 @@ body {
   top: 15px;
 }
 #header .search-form {
+  /* 给搜索表单添加一个左右内间距  内容变小 input宽度就会小 */
   padding: 5px 45px;
 }
-#header .search-form input {
+#header .search-form > input {
   background-color: #fff;
-  font-size: 14px;
-  text-align: left;
   margin-bottom: 0;
+  /* 默认就让输入框文字居左 */
+  text-align: left;
+  font-size: 14px;
 }
+/* 3. 中间主体部分 */
 #main {
-  padding: 45px 0;
+  /* 加了margin main容器的高度和区域滚动的子容器的高度不一致
+	同时加margin会造成margin塌陷  父容器也会随着子容器的margin下来 */
+  /* margin-top:45px;
+	margin-bottom:45px;	 */
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+/* 9. 底部区域样式 */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  /* 固定定位是没有默认100%宽度 */
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+}
+#footer a {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+}
+#footer a > span {
+  display: block;
+  margin-top: 2px;
+}
+#footer a.active {
+  color: orange;
 }
 /* 3. 商品的公共样式 */
 .product {
@@ -71,6 +99,14 @@ body {
 .product .product-img {
   width: 100%;
 }
+.product .product-name {
+  /* 控制只显示2行文字对于隐藏 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 .product .product-price {
   font-size: 12px;
 }
@@ -80,89 +116,61 @@ body {
 .product .product-price .old-price {
   color: #888;
 }
-.search-box {
-  padding-top: 10px;
-}
-.search-box .search-form {
-  padding: 0 10px;
+/* 1. 搜索表单的公共样式 */
+.search-form > form {
+  padding: 10px;
   position: relative;
+  padding-right: 64px;
 }
-.search-box .search-form > input {
-  background-color: #fff;
-  border: 1px solid #006699;
+.search-form > form > .input-search {
+  height: 33px;
   font-size: 12px;
-  text-align: left;
-  height: 30px;
+  border-color: #006699;
+  /* 把输入框右上角右下角圆角去掉 */
+  border-radius: 3px 0px 0px 3px;
+  margin-bottom: 0;
 }
-.search-box .search-form .btn-search {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  height: 30px;
-  background-color: #006699;
-  font-size: 16px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  line-height: 10px;
-}
-#footer {
-  z-index: 999;
-  height: 45px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: #006699;
-}
-#footer a {
-  display: block;
-  font-size: 14px;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-}
-#footer a > span {
-  display: block;
-  margin-top: 2px;
-}
-#footer a.active {
-  color: orange;
-}
-#main .search-history {
-  padding: 0 10px;
-}
-#main .search-history .title {
-  padding: 10px 0;
-}
-#main .search-history .title > span {
-  font-size: 12px;
-  color: #666;
-}
-#main .search-history .title .btn-clear {
-  line-height: 20px;
-  font-size: 12px;
-  color: #666;
-}
-#main .search-history .content {
-  border: 1px solid #ccc;
-  line-height: 30px;
-}
-#main .search-history .content > ul > li {
-  border-bottom: 1px solid #ccc;
-  position: relative;
-  padding-left: 15px;
-}
-#main .search-history .content > ul > li:last-child {
-  border-bottom: 0;
-}
-#main .search-history .content > ul > li > a {
-  color: #666;
-  font-size: 12px;
-}
-#main .search-history .content > ul > li .btn-delete {
+.search-form > form .btn-search {
   position: absolute;
   right: 10px;
   top: 10px;
+  background-color: #006699;
+  border-color: #006699;
+  /* 把按钮左上角左下角的圆角去掉 */
+  border-radius: 0px 3px 3px 0px;
+}
+/* 2. 搜索历史的样式 */
+.search-history {
+  padding: 0 10px;
+}
+.search-history .title span {
+  font-size: 12px;
+}
+.search-history .title .btn-clear {
   color: #666;
   font-size: 12px;
+}
+.search-history .content {
+  padding-top: 10px;
+}
+.search-history .content > ul {
+  border: 1px solid #ccc;
+}
+.search-history .content > ul > li {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.search-history .content > ul > li:last-child {
+  border-bottom: 0;
+}
+.search-history .content > ul > li > a {
+  color: #666;
+  font-size: 12px;
+  line-height: 30px;
+  padding-left: 15px;
+}
+.search-history .content > ul > li .btn-delete {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
