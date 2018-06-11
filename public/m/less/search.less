@@ -1,43 +1,41 @@
-@import "./base.less";
-#main {
-    .search-history {
-        padding: 0 10px;
-        .title {
-            padding: 10px 0;
-            >span {
-                font-size: 12px;
-                color: #666;
-            }
-            .btn-clear {
-                line-height: 20px;
-                font-size: 12px;
-                color: #666;
-            }
-        }
-        .content {
-            border: 1px solid #ccc;
-            line-height: 30px;
-            >ul {
-                >li {
-                    border-bottom: 1px solid #ccc;
-                    position: relative;
-                    padding-left: 15px;
-                    &:last-child {
-                        border-bottom: 0;
-                    }
-                    >a {
-                        color: #666;
-                        font-size: 12px;
-                    }
-                    .btn-delete {
-                        position: absolute;
-                        right: 10px;
-                        top: 10px;
-                        color: #666;
-                        font-size: 12px;
-                    }
-                }
-            }
-        }
-    }
+/* 引入公共样式文件 */
+@import 'base.less';
+
+/* 2. 搜索历史的样式 */
+
+.search-history{
+	padding:0 10px;
+	.title{		
+		span{
+			font-size: 12px;
+		}
+		.btn-clear{
+			color:#666;
+			font-size: 12px;
+		}
+	}
+	.content{
+		padding-top: 10px;
+		>ul{
+			border:1px solid #ccc;
+			>li{
+				border-bottom: 1px solid #ccc;
+				position: relative;
+				&:last-child{
+					border-bottom: 0;
+				}
+				>a{
+					color:#666;
+					font-size: 12px;
+					line-height: 30px;
+					padding-left: 15px;
+				}
+				.btn-delete{
+					position: absolute;
+					right: 10px;
+					top: 10px;
+				}
+			}
+		}
+	}
 }

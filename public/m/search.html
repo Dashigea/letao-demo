@@ -3,87 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>乐淘搜索中心</title>
-    <link rel="icon" href="./images/favicon.ico">
-    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
-    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
-    <link rel="stylesheet/less" href="./less/search.less">
-    <script src="./lib/less/less.js"></script>
+    <title>这是搜索页面的标题</title>
+    <!-- 添加视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入站点图标  rel里面要知道icon表示引入文件是一个图标 href的路径就图标路径 -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- 1. 引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标的css文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入分类的less文件 注意rel="stylesheet/less" -->
+    <link rel="stylesheet/less" href="less/search.less">
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
 </head>
 
 <body>
-    <!-- 头部啦 -->
+    <!-- 外面的大容器通常使用id 提示选择器优先级 区分每一块功能 -->
+    <!-- 1. 头部区域  -->
     <header id="header">
-        <a href="" class="fa fa-arrow-left"></a>
-        <h4>搜索中心</h4>
+        <a href="#" class="fa fa-arrow-left"></a>
+        <h4>搜索中心</h4>        
     </header>
-    <!-- 搜索界面 -->
     <main id="main">
-        <div class="search-box">
-            <form action="#" class="search-form">
-                <input type="text" placeholder="搜索你喜欢的商品" class="input-search">
-                <button class="btn-search mui-btn mui-btn-primary">搜索</button>
-            </form>
+    	  <!-- 搜索表单 -->
+        <div class="search-form">
+    	   <form action="#">
+    	   	<input type="text" class="input-search" placeholder="请输入要搜索的商品">
+    	   	<a href="#" class="mui-btn mui-btn-primary btn-search">搜索</a>
+    	   </form>
         </div>
         <!-- 搜索历史记录 -->
         <div class="search-history">
-            <div class="title mui-clearfix">
-                <span class="mui-pull-left">搜索历史</span>
-                <a href="#" class="mui-pull-right fa fa-trash btn-clear">清空记录</a>
-            </div>
-            <div class="content">
-            </div>
+    		<div class="title mui-clearfix">
+    			<span class="mui-pull-left">搜索记录</span>
+    			<a href="#" class="mui-pull-right fa fa-trash btn-clear">清空记录</a>
+    		</div>
+    		<div class="content">
+    			
+    		</div>
         </div>
-
     </main>
-    <!-- 底部菜单功能模块 -->
+    <!-- 9. 底部导航 -->
     <footer id="footer">
         <div class="mui-row">
             <div class="mui-col-xs-3">
-                <a href="index.html" class="fa fa-home" aria-hidden="true">
+                <a href="index.html" class="fa fa-home active">
                     <span>首页</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="category.html" class="fa fa-bars" aria-hidden="true">
+                <a href="category.html" class="fa fa-bars">
                     <span>分类</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="" class="fa fa-shopping-cart" aria-hidden="true">
+                <a href="cart.html" class="fa fa-shopping-cart">
                     <span>购物车</span>
                 </a>
             </div>
             <div class="mui-col-xs-3">
-                <a href="login.html" class="fa fa-user" aria-hidden="true">
+                <a href="user.html" class="fa fa-user">
                     <span>会员中心</span>
                 </a>
             </div>
         </div>
-
     </footer>
-    <script type="text/html" id="searchListTmp">
-        {{if rows.length}}
-        <ul>
+    <!-- 1. 创建搜素历史记录模板 -->
+    <script id="searchListTmp" type="text/html">
+       {{if rows.length}}
+         <ul>
             {{each rows as value i}}
             <li>
-                <a href="productlist.html">
+                <a href="#">
                     <span>{{value.search}}</span>
+                    <!-- 把当前id存储在span上 点击到时候获取自身的data-id的值 -->
+                    <span class="fa fa-times btn-delete" data-id="{{value.id}}"></span>
                 </a>
-                <span class="btn-delete fa fa-close" data-id="{{value.id}}"></span>
             </li>
             {{/each}}
         </ul>
-        {{/if}}
+       {{/if}}
     </script>
-    <!-- 引入其他工具包 -->
-    <script src="./lib/mui/js/mui.min.js"></script>
-    <script src="./lib/zepto/zepto.min.js"></script>
-    <script src="./lib/artTemplate/template.js"></script>
-    <script src="./js/search.js"></script>
-
+    <!-- 5. 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 6. 引入zepto的js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 7. 引入模板引擎的js文件 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <!-- 8. 引入分类的js文件 -->
+    <script src="js/search.js"></script>
+    <!-- <script src="js/search1.js"></script> -->
 </body>
 
 </html>

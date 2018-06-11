@@ -1,121 +1,63 @@
-@import "./base.less";
-body {
-    background-color: #fff;
+/* 引入导入公共样式文件 */
+@import 'base.less';
+/* 2. 导航区域样式 */
+
+#nav{
+	padding: 10px;
+	.mui-row{
+		>div{
+			>a{
+				display: block;
+				>img{
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
-#main {
-    padding: 45px 0; // 头部
-    #category {
-        width: 100%;
-        .nav {
-            padding: 10px 10px 30px;
-            display: flex;
-            flex-wrap: wrap;
-            li {
-                flex-basis: 33.33333%;
-                margin-bottom: -5px;
-                a {
-                    display: block;
-                    width: 100%;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
-        }
-    }
-    #discount {
-        display: flex;
-        border-top: 1px solid #ccc;
-        height: 100%;
-        padding: 0 10px;
-        .left {
-            flex: 2;
-            width: 100%;
-            display: flex;
-            a {
-                flex: 1;
-                width: 100%;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        .right {
-            flex: 1;
-            display: flex;
-            display: block;
-            img {
-                width: 100%;
-            }
-        }
-    }
-    #brand {
-        padding: 0 10px;
-        .title {
-            width: 100%;
-            display: block;
-            a{
-                display: block;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        .content {
-            a {
-                width: 100%;
-                height: 100%;
-                display: block;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-    #sport,
-    #women,
-    #man {
-        padding: 0 10px;
-        .title {
-            margin-top: 20px;
-            margin-bottom: 5px;
-            a {
-                display: block;
-                width: 100%;
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        .content {
-            .mui-row {
-                div {
-                    padding: 5px;
-                    .product {
-                        box-shadow: 0 0 5px #666;
-                        display: block;
-                        text-align: center;
-                        padding-bottom: 10px;
-                        .product-img {
-                            width: 100%;
-                        }
-                        .product-name {
-                            padding: 0 10px;
-                        }
-                        .product-price {
-                            font-size: 12px;
-                            .new-price {
-                                color: #f00;
-                            }
-                            .old-price {
-                                color: #888;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
+/* 3. 广告区域样式 */
+
+#banner{
+	border-top: 1px solid #ccc;
+	padding: 0 10px;
+	a{
+		display: block;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+/* 4. 品牌专区样式 */
+
+#brand{
+	padding: 0 10px;
+	a{
+		display: block;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+/* 5. 运动专区样式 */
+
+#sport,#women,#man{
+	padding: 0 10px;
+	.title{
+		>a{
+			>img{
+				width: 100%;
+			}
+		}
+	}
+	.content{
+		.mui-row{
+			>div{
+				padding: 5px;
+				
+			}
+		}
+	}
 }

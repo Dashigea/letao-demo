@@ -1,37 +1,35 @@
-@import "base.less";
-html,
-body {
-    height: 100%;
+@import 'base.less';
+html,body{
+	height: 100%;
 }
-
-#main {
+#main{
+	height: 100%;
+}
+/* 一个相对定位并且没有padding的容器 */
+.container {
+    position: relative;
     height: 100%;
-    .container {
-        position: relative;
-        height: 100%;
-        .mui-scroll {
-            .productlist {
-                .title {
-                    .mui-row {
-                        background-color: #eee;
-                        >div {
-                            >a {
-                                color: #333;
-                                line-height: 30px;
-                                font-size: 12px;
-                                text-align: center; //当上面这个不生效,转块试试
-                                display: block;
-                            }
-                        }
+    /* 1. 商品列表的样式 */
+    .productlist {
+        .title {
+            background-color: #eee;
+            .mui-row {
+                >div {
+                    >a {
+                        color: #666;
+                        text-align: center;
+                        font-size: 12px;
+                        display: block;
+                        line-height: 30px;
+                        >span {}
                     }
                 }
             }
-            .content {
+        }
+        .content {
+            .mui-row {
                 >div {
-                    padding: 10px;
-                    >div{
-                        padding: 5px;
-                    }
+                    padding: 5px;
                 }
             }
         }
