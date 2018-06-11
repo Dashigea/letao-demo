@@ -128,3 +128,30 @@ body {
 #footer a.active {
   color: orange;
 }
+html,
+body {
+  height: 100%;
+}
+#main {
+  height: 100%;
+}
+#main .container {
+  position: relative;
+  height: 100%;
+}
+#main .container .mui-scroll .productlist .title .mui-row {
+  background-color: #eee;
+}
+#main .container .mui-scroll .productlist .title .mui-row > div > a {
+  color: #333;
+  line-height: 30px;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+#main .container .mui-scroll .content > div {
+  padding: 10px;
+}
+#main .container .mui-scroll .content > div > div {
+  padding: 5px;
+}

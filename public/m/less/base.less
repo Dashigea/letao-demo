@@ -64,6 +64,7 @@ body {
             margin-bottom: 0;
         }
     }
+    
 
 }
 
@@ -91,7 +92,32 @@ body {
         }
     }
 }
-
+// 搜索框
+.search-box {
+    padding-top: 10px;
+    .search-form {
+        padding: 0 10px;
+        position: relative;
+        >input {
+            background-color: #fff;
+            border: 1px solid @mainColor;
+            font-size: 12px;
+            text-align: left;
+            height: 30px;
+        }
+        .btn-search {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            height: 30px;
+            background-color: @mainColor;
+            font-size: 16px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            line-height: 10px;
+        }
+    }
+}
 #footer {
     z-index: 999;
     height: 45px;

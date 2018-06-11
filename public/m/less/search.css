@@ -128,3 +128,41 @@ body {
 #footer a.active {
   color: orange;
 }
+#main .search-history {
+  padding: 0 10px;
+}
+#main .search-history .title {
+  padding: 10px 0;
+}
+#main .search-history .title > span {
+  font-size: 12px;
+  color: #666;
+}
+#main .search-history .title .btn-clear {
+  line-height: 20px;
+  font-size: 12px;
+  color: #666;
+}
+#main .search-history .content {
+  border: 1px solid #ccc;
+  line-height: 30px;
+}
+#main .search-history .content > ul > li {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  padding-left: 15px;
+}
+#main .search-history .content > ul > li:last-child {
+  border-bottom: 0;
+}
+#main .search-history .content > ul > li > a {
+  color: #666;
+  font-size: 12px;
+}
+#main .search-history .content > ul > li .btn-delete {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #666;
+  font-size: 12px;
+}

@@ -1,0 +1,39 @@
+@import "base.less";
+html,
+body {
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    .container {
+        position: relative;
+        height: 100%;
+        .mui-scroll {
+            .productlist {
+                .title {
+                    .mui-row {
+                        background-color: #eee;
+                        >div {
+                            >a {
+                                color: #333;
+                                line-height: 30px;
+                                font-size: 12px;
+                                text-align: center; //当上面这个不生效,转块试试
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .content {
+                >div {
+                    padding: 10px;
+                    >div{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
