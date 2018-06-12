@@ -1,0 +1,43 @@
+@import "base.less";
+#main {
+    .search-history {
+        padding: 0 10px;
+        .title {
+            font-size: 12px;
+            >span {
+                color: #000;
+            }
+            >.btn-clear {
+                color: #666;
+                line-height: 20px;
+            }
+        }
+        .content {
+            padding-top: 10px;
+            >ul {
+                border: 1px solid #ccc;
+                >li {
+                    position: relative;
+                    border-bottom: 1px solid #ccc;
+                    &:last-child{
+                        border-bottom: 0 solid #000;
+                    }
+                    >a {
+                        line-height: 30px;
+                        color: #666;
+                        &:first-child{
+                            font-size: 12px;
+                            padding-left: 15px;
+                        }
+                        .btn-delete {
+                            font-size: 14px;
+                            position: absolute;
+                            top: 8px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

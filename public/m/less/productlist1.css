@@ -146,3 +146,27 @@ a {
   /* 把按钮左上角左下角的圆角去掉 */
   border-radius: 0px 3px 3px 0px;
 }
+html,
+body {
+  height: 100%;
+}
+#main {
+  height: 100%;
+}
+#main .container {
+  height: 100%;
+  position: relative;
+}
+#main .container .productlist {
+  height: 30px;
+  background: #eee;
+}
+#main .container .productlist .title > div {
+  text-align: center;
+}
+#main .container .productlist .title > div a {
+  line-height: 30px;
+  display: block;
+  font-size: 12px;
+  color: #666;
+}

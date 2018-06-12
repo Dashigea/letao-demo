@@ -3,6 +3,7 @@ $(function() {
     letao = new Letao();
     letao.initPullRefresh();
     letao.searchProductList();
+    letao.getProductList();
 });
 
 //Letao的构造函数

@@ -13,13 +13,6 @@ body {
   /* padding-top: 45px; */
   /* padding-bottom: 45px; */
 }
-ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
 /* 1. 头部区域公共样式 */
 #header {
   position: fixed;
@@ -145,4 +138,44 @@ a {
   border-color: #006699;
   /* 把按钮左上角左下角的圆角去掉 */
   border-radius: 0px 3px 3px 0px;
+}
+#main .search-history {
+  padding: 0 10px;
+}
+#main .search-history .title {
+  font-size: 12px;
+}
+#main .search-history .title > span {
+  color: #000;
+}
+#main .search-history .title > .btn-clear {
+  color: #666;
+  line-height: 20px;
+}
+#main .search-history .content {
+  padding-top: 10px;
+}
+#main .search-history .content > ul {
+  border: 1px solid #ccc;
+}
+#main .search-history .content > ul > li {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+#main .search-history .content > ul > li:last-child {
+  border-bottom: 0 solid #000;
+}
+#main .search-history .content > ul > li > a {
+  line-height: 30px;
+  color: #666;
+}
+#main .search-history .content > ul > li > a:first-child {
+  font-size: 12px;
+  padding-left: 15px;
+}
+#main .search-history .content > ul > li > a .btn-delete {
+  font-size: 14px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
 }
